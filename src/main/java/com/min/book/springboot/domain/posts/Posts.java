@@ -1,6 +1,7 @@
 package com.min.book.springboot.domain.posts;
 
 // 서비스 초기 구축 단계에서는 테이블 설계가 빈번하게 변경되는데 이때 롬복이 코드 변경량을 최소화시켜주기 때문에 적극적으로 사용됨.
+import com.min.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스임을 나타냄.
 // Entity 클래스에서는 절대 setter 메소드를 만들지 않는다. 값 변경이 필요하면 명확한 목적과 의도가 드러나는 메소드를 만들자.
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성규칙 정의. 이 타입이 auto increment됨

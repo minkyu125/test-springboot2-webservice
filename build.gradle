@@ -30,5 +30,6 @@ dependencies {
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2') // 인메모리 RDB, 재시작마다 초기화, 로컬이나 테스트 용도로 많이 사용.
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

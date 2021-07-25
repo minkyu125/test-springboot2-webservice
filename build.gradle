@@ -18,12 +18,17 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.min.book'
 version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2') // 인메모리 RDB, 재시작마다 초기화, 로컬이나 테스트 용도로 많이 사용.
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
